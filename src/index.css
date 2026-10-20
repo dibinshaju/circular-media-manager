@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-page: #FFF8EC;
+  --color-text-primary: #171717;
+  --color-primary: #7450E8;
+  --color-primary-hover: #6339E0;
+  --color-accent-yellow: #FFD93D;
+  --color-accent-mint: #75E6C1;
+  --color-surface-card: #FFFFFF;
+  --color-border: #292929;
+  --color-text-muted: #77736D;
+}
+
+body {
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Curio Editorial Utility Classes */
+@layer components {
+  .btn-editorial-purple {
+    @apply inline-flex items-center justify-center font-bold text-white bg-purple border-2 border-charcoal-border rounded-full px-5 py-2.5 transition-all duration-150 shadow-editorial hover:-translate-y-0.5 hover:shadow-editorial-lg active:translate-x-0.5 active:translate-y-0.5 active:shadow-editorial-press focus:outline-none focus:ring-2 focus:ring-purple/40;
+  }
+
+  .btn-editorial-yellow {
+    @apply inline-flex items-center justify-center font-bold text-charcoal bg-yellow border-2 border-charcoal-border rounded-full px-5 py-2.5 transition-all duration-150 shadow-editorial hover:-translate-y-0.5 hover:shadow-editorial-lg active:translate-x-0.5 active:translate-y-0.5 active:shadow-editorial-press focus:outline-none;
+  }
+
+  .btn-editorial-white {
+    @apply inline-flex items-center justify-center font-bold text-charcoal bg-white border-2 border-charcoal-border rounded-full px-5 py-2.5 transition-all duration-150 shadow-editorial hover:-translate-y-0.5 hover:shadow-editorial-lg active:translate-x-0.5 active:translate-y-0.5 active:shadow-editorial-press focus:outline-none;
+  }
+
+  .card-editorial {
+    @apply bg-white border-[2.5px] border-charcoal-border rounded-3xl shadow-editorial-lg transition-all;
+  }
+
+  .pill-mint {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-mint/40 border border-charcoal-border rounded-full text-xs font-bold text-charcoal tracking-wide;
+  }
+
+  .pill-yellow {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-yellow border border-charcoal-border rounded-full text-xs font-bold text-charcoal tracking-wide;
+  }
+
+  .pill-purple {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-purple-light border border-charcoal-border rounded-full text-xs font-bold text-purple tracking-wide;
+  }
+
+  .marker-highlight {
+    background: linear-gradient(180deg, transparent 55%, #FFD93D 55%);
+    display: inline;
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+}
